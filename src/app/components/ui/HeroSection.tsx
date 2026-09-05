@@ -26,44 +26,44 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="relative overflow-hidden w-full sm:w-auto h-14 px-8 rounded-xl bg-gradient-to-r from-sia-green to-sia-green-dark text-white font-bold hover:shadow-xl hover:shadow-sia-green/20 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 group">
+            <a href="#deposits" className="relative overflow-hidden w-full sm:w-auto h-14 px-8 rounded-xl bg-gradient-to-r from-sia-green to-sia-green-dark text-white font-bold hover:shadow-xl hover:shadow-sia-green/20 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 group">
               <span className="relative z-10">Explore Our Plans</span>
               <TrendingUp className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="w-full sm:w-auto h-14 px-8 rounded-xl bg-white dark:bg-[#111] text-gray-900 dark:text-white font-bold border border-gray-200 dark:border-gray-800 hover:border-sia-gold dark:hover:border-sia-gold hover:text-sia-gold dark:hover:text-sia-gold transition-colors flex items-center justify-center">
+            </a>
+            <a href="#about" className="w-full sm:w-auto h-14 px-8 rounded-xl bg-white dark:bg-[#111] text-gray-900 dark:text-white font-bold border border-gray-200 dark:border-gray-800 hover:border-sia-gold dark:hover:border-sia-gold hover:text-sia-gold dark:hover:text-sia-gold transition-colors flex items-center justify-center">
               Our Vision
-            </button>
+            </a>
           </div>
         </div>
 
         {/* Right Hero Image with Floating Elements */}
         <div className="w-full lg:w-[40%] mt-16 lg:mt-0 relative flex justify-center lg:justify-end">
-          <div className="relative w-[90%] max-w-[400px] aspect-square flex items-center justify-center">
-            
+
+          {/* Floating icons — outside the image, around its edges */}
+          <div className="absolute -top-4 left-4 h-14 w-14 bg-white dark:bg-[#111] rounded-2xl shadow-xl flex items-center justify-center border border-gray-100 dark:border-gray-800 animate-bounce z-20" style={{animationDelay: "0ms", animationDuration: "3s"}}>
+            <Shield className="h-6 w-6 text-sia-green" />
+          </div>
+          <div className="absolute bottom-8 -left-2 lg:left-0 h-14 w-14 bg-white dark:bg-[#111] rounded-2xl shadow-xl flex items-center justify-center border border-gray-100 dark:border-gray-800 animate-bounce z-20" style={{animationDelay: "600ms", animationDuration: "3s"}}>
+            <TrendingUp className="h-6 w-6 text-sia-gold" />
+          </div>
+          <div className="absolute top-1/3 -right-2 lg:right-0 h-14 w-14 bg-white dark:bg-[#111] rounded-2xl shadow-xl flex items-center justify-center border border-gray-100 dark:border-gray-800 animate-bounce z-20" style={{animationDelay: "1200ms", animationDuration: "3s"}}>
+            <Leaf className="h-6 w-6 text-sia-green" />
+          </div>
+
+          {/* Image container — clean, no icons inside */}
+          <div className="relative w-[90%] max-w-[480px] aspect-square flex items-center justify-center">
             {/* Glowing background behind image */}
             <div className="absolute inset-0 bg-gradient-to-br from-sia-green/20 to-sia-gold/20 rounded-full animate-pulse blur-3xl"></div>
             
             <div className="relative h-full w-full flex items-center justify-center animate-fade-in-up">
-               {/* The User's Hero Image - Strictly contained */}
-               <img 
-                 src="/hero_image.png" 
-                 alt="SIA Secure Hero" 
-                 className="relative z-10 w-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
-               />
-              
-              {/* Orbiting Elements - Using percentages to NEVER clip out of the viewport */}
-              <div className="absolute top-[10%] left-[5%] h-14 w-14 sm:h-16 sm:w-16 bg-white dark:bg-[#111] rounded-2xl shadow-xl flex items-center justify-center border border-gray-100 dark:border-gray-800 animate-bounce z-20" style={{animationDelay: "0ms", animationDuration: "3s"}}>
-                <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-sia-green" />
-              </div>
-              <div className="absolute bottom-[10%] right-[5%] h-14 w-14 sm:h-16 sm:w-16 bg-white dark:bg-[#111] rounded-2xl shadow-xl flex items-center justify-center border border-gray-100 dark:border-gray-800 animate-bounce z-20" style={{animationDelay: "500ms", animationDuration: "3s"}}>
-                <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-sia-gold" />
-              </div>
-              <div className="absolute top-[45%] right-[5%] h-14 w-14 sm:h-16 sm:w-16 bg-white dark:bg-[#111] rounded-2xl shadow-xl flex items-center justify-center border border-gray-100 dark:border-gray-800 animate-bounce z-20" style={{animationDelay: "1000ms", animationDuration: "3s"}}>
-                <Leaf className="h-6 w-6 sm:h-8 sm:w-8 text-sia-green" />
-              </div>
-
+              <img 
+                src="/hero_image.png" 
+                alt="SIA Secure Hero" 
+                className="relative z-10 w-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
+              />
             </div>
           </div>
+
         </div>
 
       </div>

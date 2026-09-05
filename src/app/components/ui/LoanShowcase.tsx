@@ -94,8 +94,9 @@ export default function LoanShowcase() {
               ))}
             </div>
             
-            <button className="mt-10 w-full sm:w-auto h-12 px-8 rounded-xl bg-gradient-to-r from-sia-green to-sia-green-dark text-white font-bold hover:shadow-lg hover:shadow-sia-green/30 transition-all whitespace-nowrap">
-              {t("Apply for a Loan Today", "आज ही ऋण के लिए आवेदन करें")}
+            <button className="mt-10 h-12 px-8 rounded-xl bg-gradient-to-r from-sia-green to-sia-green-dark text-white font-bold hover:shadow-lg hover:shadow-sia-green/30 transition-all flex items-center gap-2 whitespace-nowrap">
+              <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+              {t("Coming Soon", "जल्द आ रहा है")}
             </button>
             
           </div>
