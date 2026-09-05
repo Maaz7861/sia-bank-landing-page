@@ -10,9 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16 border-b border-gray-200 dark:border-gray-800 pb-16">
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="h-8 w-8 bg-sia-green rounded-md flex items-center justify-center">
-                 <Image src="/logo.png" alt="SIA Logo" width={20} height={20} className="object-contain filter brightness-0 invert" priority sizes="20px" />
-              </div>
+              <Image src="/logo.png" alt="SIA Logo" width={32} height={32} className="object-contain" priority sizes="32px" />
               <span className="text-xl font-black tracking-tight text-gray-900 dark:text-white">SIA<span className="text-sia-green">Bank</span></span>
             </Link>
             <p className="text-gray-600 dark:text-gray-400 text-sm max-w-sm mb-6 leading-relaxed">

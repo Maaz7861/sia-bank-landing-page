@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #f8fafc;
   --foreground: #022c22;
@@ -9,12 +13,31 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-sia-green: #047857;
-  --color-sia-green-dark: #064e3b;
-  --color-sia-gold: #d4af37;
-  --color-sia-gold-light: #fcd34d;
+  --color-sia-green: #10B981; /* Brighter Emerald */
+  --color-sia-green-dark: #059669; /* Rich Emerald */
+  --color-sia-gold: #F59E0B; /* Bright Amber Gold */
+  --color-sia-gold-light: #FBBF24; /* Radiant Gold */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  
+  --animate-fade-in-up: fadeInUp 0.5s ease-out forwards;
+  --animate-grow-up: growUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes growUp {
+    from { height: 0%; }
+    to { height: var(--bar-height); }
+  }
 }
 
 .dark {

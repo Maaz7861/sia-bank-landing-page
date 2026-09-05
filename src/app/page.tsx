@@ -1,8 +1,10 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/ui/HeroSection";
-import StatsStrip from "./components/ui/StatsStrip";
-import Features from "./components/ui/Features";
-import ProductShowcase from "./components/ui/ProductShowcase";
+import AboutUs from "./components/ui/AboutUs";
+import ProductTabs from "./components/ui/ProductTabs";
+import InvestmentPlans from "./components/ui/InvestmentPlans";
+import AnalyticsSection from "./components/ui/AnalyticsSection";
+import LoanShowcase from "./components/ui/LoanShowcase";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -10,9 +12,11 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <StatsStrip />
-      <Features />
-      <ProductShowcase />
+      <AboutUs />
+      <ProductTabs />
+      <InvestmentPlans />
+      <AnalyticsSection />
+      <LoanShowcase />
       <Footer />
     </main>
   );
