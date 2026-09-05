@@ -41,7 +41,7 @@ export default function InvestmentPlans() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {plans.map((plan, idx) => (
             <div key={idx} className="bg-gray-50 dark:bg-[#111] rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl hover:shadow-sia-green/10 dark:hover:shadow-sia-green/20 hover:-translate-y-3 hover:border-sia-green/50 dark:hover:border-sia-green/50 transition-all duration-500 flex flex-col justify-between group cursor-pointer relative overflow-hidden">
               

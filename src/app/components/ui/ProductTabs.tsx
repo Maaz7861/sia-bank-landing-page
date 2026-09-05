@@ -7,9 +7,9 @@ export default function ProductTabs() {
   const [activeTab, setActiveTab] = useState("savings");
 
   const tabs = [
-    { id: "savings", label: "SIA Samriddhi Khata (Savings)", icon: <Wallet className="h-4 w-4" /> },
-    { id: "current", label: "SIA Vyapar Khata (Current)", icon: <Briefcase className="h-4 w-4" /> },
-    { id: "daily", label: "SIA Dhanpocket (Daily)", icon: <CalendarClock className="h-4 w-4" /> },
+    { id: "savings", label: "Savings Account", fullLabel: "SIA Samriddhi Khata (Savings)", icon: <Wallet className="h-4 w-4" /> },
+    { id: "current", label: "Current Account", fullLabel: "SIA Vyapar Khata (Current)", icon: <Briefcase className="h-4 w-4" /> },
+    { id: "daily", label: "Daily Collection", fullLabel: "SIA Dhanpocket (Daily)", icon: <CalendarClock className="h-4 w-4" /> },
   ];
 
   return (
@@ -30,13 +30,15 @@ export default function ProductTabs() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 ${
+              className={`flex items-center gap-2 px-4 md:px-6 py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${
                 activeTab === tab.id
                   ? "bg-gradient-to-r from-sia-green to-sia-green-dark text-white shadow-lg shadow-sia-green/20 scale-105"
                   : "bg-white dark:bg-[#111] text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-800"
               }`}
             >
-              {tab.icon} {tab.label}
+              {tab.icon}
+              <span className="sm:hidden">{tab.label}</span>
+              <span className="hidden sm:inline">{tab.fullLabel}</span>
             </button>
           ))}
         </div>
